@@ -13,7 +13,7 @@ body{
   flex-direction: column;
   align-items: center;
   padding: 4rem 7rem;
-  gap: 1.5rem;
+  gap: 2.5rem;
 }
 
 .main_section{
@@ -56,3 +56,39 @@ body{
   top: 2.5rem;
   cursor: pointer;
 }
+
+.link_section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 1.5rem;
+  width: 72rem;
+}
+
+.link_section a{
+  background: #EAECF0;
+  border: 1px solid #EAECF0;
+  border-radius: 8px;
+  padding: 1.5rem 2rem;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #101828;
+}
+
+.social_section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 1.5rem;
+}
+
