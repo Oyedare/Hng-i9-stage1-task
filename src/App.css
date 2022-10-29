@@ -92,3 +92,22 @@ body{
   gap: 1.5rem;
 }
 
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 2rem;
+  padding-top: 2rem;
+  gap: 2rem;
+  border-top: 1px solid #EAECF0;
+}
+
+.footer p{
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #667085;
+}
+
