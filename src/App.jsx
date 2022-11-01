@@ -10,7 +10,7 @@ function App() {
   const links = [
     {
       text: 'Twitter Link',
-      id: 'btn_twitter',
+      id: 'btn__twitter',
       href: 'https://twitter.com/_stephentony_'
     },
     {
@@ -25,8 +25,8 @@ function App() {
     },
     {
       text: 'Python Books',
-      id: 'btn_twitter',
-      href: 'https://books.zuri.team/python-for-beginners?ref_id=Oyedare Temiloluwa Stephen'
+      id: 'book__python',
+      href: 'https://books.zuri.team/python-for-beginners?ref_id=stephentony'
     },
     {
       text: 'Background Check for Coders',
@@ -45,8 +45,8 @@ function App() {
         <div className="main_section">
           <div className="profile_section">
             <img src={profile} alt="profile pic" id='profile__img'/>
-            <h1 id='twitter'>Annette Black</h1>
-            <p id='slack'>Oyedare Temiloluwa Stephen</p>
+            <h1 id='twitter'>_stephentony_</h1>
+            <p id='slack'>stephentony</p>
             <div className="share-icon">
               <ShareBtn />
             </div>
@@ -63,7 +63,7 @@ function App() {
         </div>
 
         <div className="social_section">
-          <a href="https://app.slack.com/client/T042F7V19Q8/D048TLLKCUR/rimeto_profile/U048BSK250D?cdn_fallback=2" target='_blank' rel="noreferrer">
+          <a href="https://app.slack.com/client/T042F7V19Q8" target='_blank' rel="noreferrer">
             <Slack />
           </a>
           <a href="https://github.com/Oyedare" target='_blank' rel="noreferrer">
