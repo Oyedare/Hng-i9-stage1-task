@@ -5,6 +5,7 @@ import Slack from './assets/slack'
 import Github from './assets/github'
 import zuri from './assets/Zuri.Internship_Logo.svg'
 import I4G from './assets/I4G.svg'
+import MobileShare from './assets/mobile-share';
 function App() {
   const links = [
     {
@@ -48,6 +49,9 @@ function App() {
             <p id='slack'>Oyedare Temiloluwa Stephen</p>
             <div className="share-icon">
               <ShareBtn />
+            </div>
+            <div className="share-icon-mobile">
+              <MobileShare />
             </div>
           </div>
 
