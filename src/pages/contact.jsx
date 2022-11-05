@@ -1,6 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+    const [isChecked, setIsChecked] = useState(false);
+    const [succeed, setSucceed] = useState(false)
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        if(isChecked === true){
+            setSucceed(true)
+            setTimeout(()=>{
+                setSucceed(false)
+            },3000)
+            setFirstName('')
+            setLastName('')
+            setEmail('')
+            setMessage('')
+        }else{
+            setSucceed(false)
+        }
+    }
+
+    const handleChange = (e) => {
+        setIsChecked(e.target.checked);
+    }
   return (
     <div className='contact-container'>
         <div className="content">
@@ -8,7 +33,7 @@ const Contact = () => {
                 <h3>Contact Me</h3>
                 <p>Hi there, contact me to ask me about anything you have in mind.</p>
             </div>
-            <form action="">
+            <form action="" onSubmit={handleSubmit}>
                 <div className="input-fields">
                     <div className="name-input">
                         <div className="first-name">
@@ -17,9 +42,9 @@ const Contact = () => {
                                 type="text" 
                                 id="name"
                                 name='name'
-                                // value={} 
                                 required
-                                // onChange={handleChange}
+                                onChange={e => setFirstName(e.target.value)}
+                                value={firstName}
                                 className= 'input'
                                 placeholder='Enter your first name'
                             />
@@ -30,9 +55,9 @@ const Contact = () => {
                                 type="text" 
                                 id="name"
                                 name='name'
-                                // value={} 
+                                value={lastName} 
                                 required
-                                // onChange={handleChange}
+                                onChange={e => setLastName(e.target.value)}
                                 className= 'input'
                                 placeholder='Enter your last name'
                             />
@@ -45,9 +70,9 @@ const Contact = () => {
                             type="email" 
                             id="email"
                             name='email'
-                            // value={} 
                             required
-                            // onChange={handleChange}
+                            onChange={e => setEmail(e.target.value)}
+                            value={email}
                             className= 'input'
                             placeholder='yourname@email.com'
                         />
@@ -55,7 +80,14 @@ const Contact = () => {
 
                     <div className="message">
                         <label htmlFor="message">Message</label>
-                        <textarea name="message" id="message" placeholder="Send me a message and I'll reply you as soon as possible...">
+                        <textarea 
+                            name="message" 
+                            id="message" 
+                            placeholder="Send me a message and I'll reply you as soon as possible..."
+                            required
+                            value={message}
+                            onChange={e => setMessage(e.target.value)}
+                            >
 
                         </textarea>
                     </div>
@@ -64,13 +96,17 @@ const Contact = () => {
                         <input 
                             type="checkbox" 
                             name="checkbox" 
-                            id="checkbox" 
+                            id="checkbox"
+                            onChange={handleChange}
                         />
                         <p>You agree to providing your data to stephentony who may contact you.</p>
                     </div>
                 </div>
-                <button>Send a message</button>
+                <button className={isChecked ? '' : 'inactive'}>Send a message</button>
             </form>
+            {succeed && (
+                <p className='succeed'>Message Sent!</p>
+            )}
         </div>
     </div>
   )
