@@ -37,11 +37,11 @@ const Contact = () => {
                 <div className="input-fields">
                     <div className="name-input">
                         <div className="first-name">
-                            <label htmlFor="fname">First name</label>
+                            <label htmlFor="first_name">First name</label>
                             <input 
                                 type="text" 
-                                id="name"
-                                name='name'
+                                id="first_name"
+                                name='first_name'
                                 required
                                 onChange={e => setFirstName(e.target.value)}
                                 value={firstName}
@@ -50,11 +50,11 @@ const Contact = () => {
                             />
                         </div>
                         <div className="last-name">
-                            <label htmlFor="lname">Last name</label>
+                            <label htmlFor="last_name">Last name</label>
                             <input 
                                 type="text" 
-                                id="name"
-                                name='name'
+                                id="last_name"
+                                name='last_name'
                                 value={lastName} 
                                 required
                                 onChange={e => setLastName(e.target.value)}
@@ -102,7 +102,7 @@ const Contact = () => {
                         <p>You agree to providing your data to stephentony who may contact you.</p>
                     </div>
                 </div>
-                <button className={isChecked ? '' : 'inactive'}>Send a message</button>
+                <button className={isChecked ? '' : 'inactive'} id='btn__submit'>Send a message</button>
             </form>
             {succeed && (
                 <p className='succeed'>Message Sent!</p>
