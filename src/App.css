@@ -1,3 +1,12 @@
+html, body, div, span,h1, h2, h3, h4, h5, h6, p,input{
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -114,6 +123,147 @@ body{
   line-height: 1.5rem;
   text-align: center;
   color: #667085;
+}
+
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 4rem;
+  padding: 4rem 0px 6rem;
+
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.content-head{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.content-head h3{
+  font-weight: 600;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  letter-spacing: -0.02em;
+  color: #101828;
+}
+
+.content-head p{
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+  color: #475467;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 32px;
+  width: 720px;
+}
+
+.input-fields{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+  width: 100%;
+  /* background-color: #101828; */
+}
+
+.name-input{
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  width: 100%;
+}
+
+.first-name,.last-name,.email,.message{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 6px;
+  width: 100%;
+}
+
+label{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #344054;
+}
+
+.input,textarea{
+  background: #FFFFFF;
+  border: 1px solid #D0D5DD;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  padding: 10px 14px;
+  width: 100%;
+  outline: none;
+}
+
+textarea{
+  padding: 12px 14px;
+  height: 132px;
+}
+
+input::placeholder,textarea::placeholder{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #667085;
+}
+
+.checkbox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+  /* width: 720px; */
+}
+
+.checkbox input{
+  width: 20px;
+height: 20px;
+}
+
+.checkbox p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #475467;
+}
+
+button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  background: #1570EF;
+  border: 1px solid #1570EF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  width: 100%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1024px) {
